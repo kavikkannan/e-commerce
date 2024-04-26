@@ -23,6 +23,7 @@ export interface Config {
     categories: Category
     users: User
     redirects: Redirect
+    post:Post
     'payload-preferences': PayloadPreference
     'payload-migrations': PayloadMigration
   }
@@ -420,6 +421,11 @@ export interface User {
   loginAttempts?: number | null
   lockUntil?: string | null
   password: string | null
+}
+export interface Post{
+  id: string
+  name?: string 
+  publishedOn?: string
 }
 export interface Redirect {
   id: string
